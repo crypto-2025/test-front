@@ -1,0 +1,38 @@
+/* list.css */
+.list {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Stack UserInfo and ChatList vertically */
+    height: 100%; /* Ensure it takes the full height of the parent */
+}
+
+.userInfo {
+    /* Add styles for UserInfo if needed */
+    padding: 10px; /* Optional padding */
+    background-color: rgba(17, 25, 40, 0.5); /* Example background */
+}
+
+.chatList {
+    flex: 1; /* Allow ChatList to take the remaining space */
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 100%; /* Ensure it doesn't exceed the height of the parent */
+    padding: 10px; /* Optional padding */
+    background-color: rgba(17, 25, 40, 0.5);
+      /* Custom scrollbar styles for WebKit browsers */
+      &::-webkit-scrollbar {
+        width: 8px; /* Width of the scrollbar */
+    }
+   
+    &::-webkit-scrollbar-track {
+        display: none;
+      
+        border-radius: 10px; /* Rounded corners for the track */
+    }
+
+ 
+
+    /* Custom scrollbar styles for Firefox */
+    scrollbar-width: thin; /* Makes the scrollbar thinner */
+    scrollbar-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0.021); /* Thumb color and track color */
+    
+}

@@ -1,0 +1,82 @@
+.card-2 {
+  position: relative;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 300px;
+  height: 540px;
+  padding: 10px;
+  background: linear-gradient(to top right, #640d5f, rgb(1, 15, 78));
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* تأثير سلس */
+}
+
+
+
+.card-2:hover {
+  box-shadow: 0 0 25px 10px rgba(0, 42, 68, 0.8); /* شعاع أزرق عند التحويم */
+  transform: scale(1.05); /* تكبير الكرت قليلاً عند التحويم */
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) scale(1.2) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1.2) rotate(0deg);
+  }
+}
+.card-2 img {
+  width: 280px;
+  max-width: 450px;
+  height: 370px;
+  max-height: 370px;
+  object-fit: cover;
+  border-radius: 24px;
+  margin: 0 auto 12px;
+  transition: transform 0.3s ease;
+}
+
+.card-2:hover img {
+  transform: scale(1.1);
+}
+@media (max-width: 768px) {
+  .card-2 {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .card-2 img {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  .card-2 button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-2 {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .card-2 img {
+    margin: 5px 0;
+  }
+
+  .card-2 h2, .card-2 h3 {
+    font-size: 14px;
+  }
+
+  .card-2 button {
+    font-size: 12px;
+  }
+}

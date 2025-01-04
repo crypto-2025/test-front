@@ -1,0 +1,36 @@
+.prev-arrow ,.next-arrow{
+    cursor: pointer;
+ 
+    color:#160b4d ;
+    background: rgba(255,255,255,0.5);
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.prev-arrow{
+   margin-right: 7px;
+}
+.next-arrow{
+    margin-left: 7px;
+}
+
+.CardContainer{
+    margin: 0 10px;
+    display: inline-block;
+    
+}
+
+@media (max-width: 480px) {
+    .prev-arrow ,.next-arrow{
+        width: 30px;
+        height: 30px;
+
+    }
+    .CardContainer{
+        margin: 0 5px ;
+    }
+}

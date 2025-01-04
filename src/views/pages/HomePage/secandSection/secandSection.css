@@ -1,0 +1,145 @@
+.cardContainer{
+  display: flex;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  
+flex-wrap: wrap;
+  align-items: center;
+  background: #1f0158;
+  width: 30%;
+  height: 100px;
+  color: white;
+  font-family: Arial, sans-serif;
+  position: relative;
+  gap: 40px;
+  justify-content: center;
+}
+
+.profile-picture {
+  position: relative; /* لجعل الصورة المستطيلة تتداخل مع الصورة الدائرية */
+}
+
+.circular-image {
+  width: 80px;
+  height: 80px;
+  margin-left: -30px;
+  margin-right: 20px; /* تقليل المسافة بين الصورة الدائرية والمحتوى */
+  border-radius: 50%;
+  position: relative; /* لجعل الصورة الدائرية في موضعها الطبيعي */
+  z-index: 2; /* تأكد من أن الصورة الدائرية فوق الصورة المستطيلة */
+}
+
+.content {
+  position: relative;
+  flex-grow: 1;
+  margin-left: 5px; /* إضافة مسافة بين الصورة المستطيلة والنصوص */
+}
+
+.content div {
+  
+  position: absolute; /* لجعل الصورة المستطيلة تتداخل مع الصورة الدائرية */
+  left: 0px; /* محاذاة الصورة المستطيلة مع الصورة الدائرية */
+  top: 0px; 
+}
+
+.rectangle-image img {
+  width: 250px; /* عرض الصورة المستطيلة */
+  height: 100px;
+  margin-left:-75px;
+  margin-top: -50px;
+}
+.text-content {
+  display: flex;
+padding: 5px;
+  flex-direction: column; 
+  margin-left: 180px;
+  margin-top: 22px;/* جعل النصوص في عمود */
+}
+.content h3 {
+  margin-top: 18px ; /* إضافة هوامش أعلى النص */
+  font-size: 0.9rem;
+  margin-left:-75px;
+  margin-top: -50px;
+}
+
+.content p {
+  margin: 4px; /* إضافة هوامش أعلى النص */
+  font-size: 0.7rem;
+  color: #aaa;
+  margin-left:-75px;
+  margin-top: 8px;
+}
+
+.follow-button {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  background: linear-gradient(to top right, #640D5F, rgb(199, 113, 238));
+  border: none;
+  color: white;
+  height: 100px;
+  width: 60px;
+  border-radius: 0%;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.follow-button:hover {
+  opacity: 0.9;
+}
+/* استجابة الشاشات المتوسطة */
+@media (max-width: 768px) {
+  .cardContainer{
+    width: 20%;
+  }
+  .text-content {
+    display: flex;
+  padding: 5px;
+    flex-direction: column; 
+    margin-left: 70px;
+    margin-top: 22px;/* جعل النصوص في عمود */
+  }
+  .content h3 {
+    margin-top: 18px ; /* إضافة هوامش أعلى النص */
+    font-size: 0.5rem;
+    margin-left:0px;
+    margin-top: -50px;
+  }
+  
+  .content p {
+    margin: 4px; /* إضافة هوامش أعلى النص */
+    font-size: 0.2rem;
+    color: #aaa;
+    margin-left:0px;
+    margin-top: 8px;
+  }
+  
+}
+
+/* استجابة الشاشات الصغيرة */
+@media (max-width: 480px) {
+  .cardContainer{
+    width: 80%;
+  }
+  .text-content {
+    display: flex;
+  padding: 5px;
+    flex-direction: column; 
+    margin-left: 80px;
+    margin-top: 22px;/* جعل النصوص في عمود */
+  }
+  .content h3 {
+    margin-top: 18px ; /* إضافة هوامش أعلى النص */
+    font-size: 0.7rem;
+    margin-left:0px;
+    margin-top: -50px;
+  }
+  
+  .content p {
+    margin: 4px; /* إضافة هوامش أعلى النص */
+    font-size: 0.5rem;
+    color: #aaa;
+    margin-left:0px;
+    margin-top: 8px;
+  }
+}

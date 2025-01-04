@@ -1,0 +1,21 @@
+.prev-arrow{
+    cursor: pointer;
+    margin-right: 7px;
+    color:#160b4d ;
+    background: rgba(255,255,255,0.5);
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+@media (max-width: 480px) {
+    .prev-arrow{
+        width: 30px;
+        height: 30px;
+
+    }
+}

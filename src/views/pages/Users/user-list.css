@@ -1,0 +1,14 @@
+.Users_text {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #640D5F;
+
+   
+  }
+  
+  @media (max-width: 600px) {
+    .Users_text {
+      font-size: 1rem;
+      width: 50%;
+    }
+  }

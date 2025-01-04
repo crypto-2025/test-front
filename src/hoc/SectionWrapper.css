@@ -1,0 +1,16 @@
+.SectionWrapper{
+    padding: 50px 120px;
+}
+@media screen and (max-width: 1250px) {
+    .SectionWrapper{
+        padding: 50px 4%;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .SectionWrapper{
+        padding: 20px 1%;
+    }
+
+}

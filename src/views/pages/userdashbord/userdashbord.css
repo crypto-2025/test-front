@@ -1,0 +1,387 @@
+/* القاعدة العامة */
+body.UserDashboard {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* الحاوية */
+.dashboard-container {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  /* margin-top: 1px; */
+  background-color: #ffffff;
+  overflow: hidden;
+  grid-template-columns: 250px 1fr; /* الشريط الجانبي 250px والباقي للمحتوى */
+}
+
+/* الشريط الجانبي */
+.sidebar {
+  
+
+  height: auto;
+  /* overflow-y: scroll; */
+  /* flex: 1 1 250px; */
+  /* background-color: #640D5F; */
+  /* background: linear-gradient(207deg, #DC39FC, #640D5F, #640D5F); */
+ 
+  background: linear-gradient(to bottom, #D837F7, #640D5F);
+  /* background: linear-gradient(to left,#D43AFB, #640D5F); */
+  background-image: linear-gradient(to bottom, #640D5F, #d760f3);
+
+
+  color: white;
+  /* padding: 20px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  padding-top: 150px;
+}
+
+/* تحسين مظهر الصورة الشخصية */
+.sidebar .image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.sidebar .profile-image {
+  margin-top: 40px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #ecf0f1;
+  margin-bottom: 10px;
+}
+
+.profile-section {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.wallet-address,.ref-code {
+  border: 1px solid white;
+  padding: 0 10px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+.username {
+  margin-top: -4px;
+}
+
+
+.sidebar .icon-overlay {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.sidebar .camera-icon {
+  color: #fff;
+  font-size: 16px;
+}
+
+.sidebar .icon-overlay:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.sidebar .username {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.sidebar .wallet-address,
+.sidebar .ref-code {
+  font-size: 14px;
+  color: #d9b3ff;
+  margin-bottom: 10px;
+}
+
+.sidebar .share-button {
+  background-color: #ecf0f1;
+  color: #640D5F;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar .share-button:hover {
+  background-color: #d831d0;
+  color: #ffffff;
+}
+
+/* القائمة */
+.sidebar .menu ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar .menu ul li {
+  display: flex;
+align-items: center;
+  gap: 10px;
+padding: 10px 15px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 50px;
+  margin-top: 20px;
+  color: #ecf0f1;
+  transition: background-color 0.3s, transform 0.2s;
+  font-size: 25px;
+  -webkit-transition: background-color 0.3s, transform 0.2s;
+  -moz-transition: background-color 0.3s, transform 0.2s;
+  -ms-transition: background-color 0.3s, transform 0.2s;
+  -o-transition: background-color 0.3s, transform 0.2s;
+}
+
+.sidebar .menu ul li:hover {
+  border-radius: 50px;
+  background-color: #f5b7f2;
+  transform: scale(1.05);
+}
+
+/* القائمة الفرعية */
+.sub-menu {
+  position: absolute;
+  display: none;
+  margin-top: 80px;
+      
+  list-style-type: none;
+  flex-direction: column;
+}
+
+.sub-menu.visible {
+  display: block;
+}
+
+.sub-menu li {
+  padding: 8px 0;
+  cursor: pointer;
+  font-size: 14px;
+  color: #f5b7f2;
+}
+
+.sub-menu li:hover {
+  background-color: #e2e2e2;
+  color: #640D5F;
+}
+
+/* المحتوى الرئيسي */
+.main-content {
+  flex: 3 1 700px;
+  padding: 20px;
+  background-color: #ffffff;
+  /* border-top: 30px solid linear-gradient(45deg, #DC39FC, #6345ED); */
+  /* position: relative; */
+  padding: 20px; /* مساحة داخلية */
+  background-color: white; /* لون الخلفية */
+  z-index: 1; /* لجعل العنصر فوق الـ pseudo-element */
+}
+
+.main-content::before {
+  content: '';
+  position: absolute;
+  width: 98.5vw;
+  top: 0px;
+  left: 0;
+  right: 0;
+  height: 190px; /* ارتفاع الخط */
+  /* background-color: #640D5F; */
+
+  /* background: linear-gradient(45deg, #DC39FC, #6345ED); */
+  background: linear-gradient( to right, #D837F7, #6345ED);
+  background-image: linear-gradient(to top, #640D5F, #d760f3);
+
+  z-index: -1; /* لجعل الخط خلف المحتوى */
+
+  
+}
+
+.main-content .title {
+  font-size: 24px;
+  color: #640D5F;
+  margin-bottom: 20px;
+}
+
+.main-content .buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.main-content .buttons button {
+  background-color: #640D5F;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 250px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.main-content .buttons button:hover {
+  background-color: #640D5F;
+  transform: translateY(-2px);
+}
+
+/* الأقسام المالية */
+.summary-section,
+.earn-section {
+  margin-top: 20px;
+}
+
+.summary-section h3,
+.earn-section h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.summary-section .summary-cards,
+.earn-section .summary-cards {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.summary-section .card,
+.earn-section .card {
+  /* flex: 1 1 30%; */
+  /* background-color: #f9f9f9; */
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  width: 400px;
+  /* background-color:#80808059 ; */
+  background-color:#461d3e88  !important ;
+
+}
+
+.car {
+    font-size: 14px;
+    color: #d9b3ff;
+    margin-bottom: 10px;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: 1px solid white;
+    border-radius:30px ;
+    -webkit-border-radius:30px ;
+    -moz-border-radius:30px ;
+    -ms-border-radius:30px ;
+    -o-border-radius:30px ;
+}
+
+.summary-section .card:hover,
+.earn-section .card:hover {
+  transform: scale(1.05);
+}
+
+.summary-section .card h4,
+.earn-section .card h4 {
+  font-size: 16px;
+  color: #640D5F;
+  margin-bottom: 10px;
+}
+
+.summary-section .card p,
+.earn-section .card p {
+  font-size: 14px;
+  color: white;
+  /* color: #555; */
+}
+
+.wallet-address, .ref-code {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.copy-icon {
+  color: #f89cf4;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.copy-icon:hover {
+  color: #f1ece3;
+}
+
+/* تحسين تصميم المحتوى ل My Bundles */
+.my-bundles-content {
+  margin-top: 10px;
+  justify-content: space-between;
+  display: flex;
+}
+
+.my-bundles-content h3 {
+  color: #640D5F;
+}
+
+.my-bundles-content button {
+  background-color: #640D5F;
+  color: #ede8f1;
+  width: 250px;
+}
+
+.card-slide-in {
+  transform: translateX(-100%);
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    align-items: flex-start;
+    text-align: left;
+    
+  }
+
+  .sidebar .menu ul li {
+    text-align: left;
+  }
+
+  .main-content .buttons {
+    justify-content: center;
+  }
+
+  .summary-section .card,
+  .earn-section .card {
+    flex: 1 1 100%;
+  }
+}

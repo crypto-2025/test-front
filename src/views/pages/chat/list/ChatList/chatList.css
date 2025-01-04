@@ -1,0 +1,95 @@
+.ChatList {
+    flex: 1;
+  
+    /* Custom scrollbar styles for WebKit browsers */
+    &::-webkit-scrollbar {
+        width: 8px; /* Width of the scrollbar */
+    }
+
+    &::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1); /* Background of the scrollbar track */
+        border-radius: 10px; /* Rounded corners for the track */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgba(85, 85, 85, 0.5); /* Color of the scrollbar thumb */
+        border-radius: 10px; /* Rounded corners for the thumb */
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: rgba(102, 101, 101, 0.7); /* Color of the thumb on hover */
+    }
+
+    /* Custom scrollbar styles for Firefox */
+    scrollbar-width: thin; /* Makes the scrollbar thinner */
+    scrollbar-color: rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.1); /* Thumb color and track color */
+    
+    .search1 {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+
+        .searchBar1 {
+            flex: 1;
+            background-color: rgba(17, 25, 40, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-radius: 10px;
+            padding: 10px;
+
+            input {
+                background-color: transparent;
+                border: none;
+                outline: none;
+                color: white;
+                flex: 1;
+            }
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .add {
+            width: 36px;
+            height: 36px;
+            background-color: rgba(17, 25, 40, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    }
+
+    .item1 {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        cursor: pointer;
+        border-bottom: 1px solid #dddddd35;
+
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .texts1 {
+            flex-direction: column;
+            gap: 10px;
+
+            span.chat {
+                font-weight: 500;
+            }
+
+            p.chat {
+                font-size: 14px;
+                font-weight: 300;
+            }
+        }
+    }
+}

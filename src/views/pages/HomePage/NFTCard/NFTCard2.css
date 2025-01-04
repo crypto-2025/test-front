@@ -1,0 +1,120 @@
+.card-2 {
+    margin: 10px;
+    display: flex;
+    align-items: flex-start; /* محاذاة العناصر في الأعلى */
+    width: 700px;
+    height: 400px;
+    max-width: 650px;
+    padding: 8px; /* تقليل الحواف */
+    background: linear-gradient(to top right, #640D5F, rgb(19, 1, 68));
+    border-radius: 24px;
+    background-color: rgba(85, 84, 84, 0.7);
+  }
+  
+  .card-2 img {
+    width: 240px; /* تقليل عرض الصورة */
+    height: 240px; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    object-fit: cover;
+    border-radius: 24px; /* إضافة زوايا دائرية للصورة */
+  }
+  
+  .card-2 h2 {
+    margin-top: 40px;
+    font-size: 20px; /* تقليل حجم الخط */
+    font-weight: 600; /* زيادة سمك الخط */
+    margin: 0 0 6px; /* إزالة المسافات الزائدة */
+    color: #f1ebeb;
+  }
+  
+  .card-2 h3 {
+    margin-top: 40px;
+    font-size: 18px; /* زيادة حجم الخط */
+    font-weight: 400;
+    color: #f1ebeb;
+    margin: 0 0 12px; /* زيادة المسافة بين العنوان الفرعي والنص */
+    opacity: 0.8; /* زيادة وضوح النص */
+  }
+  
+  .card-2 p {
+    font-size: 14px; /* الحفاظ على حجم الخط */
+    font-weight: 400;
+    margin-bottom: 10px;
+    opacity: 0.6; /* تقليل الوضوح قليلاً */
+  }
+  
+  .card-2 .buttons {
+    display: flex;
+    gap: 12px;
+    align-items: center; /* محاذاة العناصر في المنتصف */
+    margin-top: auto; /* دفع الأزرار إلى الأسفل */
+  }
+  
+  .card-2 button {
+    border: 1px solid #640D5F;
+    background: transparent;
+    color: #f8f8f8;
+    width: 40%;
+    min-width: 100px;
+    text-align: center;
+    font-family: inherit;
+    padding: 10px 15px; /* تقليل الحواف */
+    font-size: 14px; /* تقليل حجم الخط */
+    border-radius: 40px;
+    transition: background 0.3s; /* إضافة تأثير عند التمرير */
+  }
+  
+  .card-2 button.primary {
+    margin-top: 20px;
+    margin-left: auto;
+    background-color: #ffffff;
+    background: linear-gradient(to top right, #640D5F, rgb(199, 113, 238));
+  }
+  
+  .ellipsis {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 600px) {
+    .card-2 {
+      margin: 0 20px; /* تقليل المسافة الجانبية */
+      padding: 20px; /* الحفاظ على الحواف */
+      width: 100%;
+      text-align: center;
+      flex-direction: column;
+    }
+  
+    .card-2 .buttons {
+      justify-content: center;
+    }
+  
+    .card-2 .buttons button {
+      width: 50%;
+    }
+  
+    .card-2 h2 {
+      margin-right: 0;
+      font-size: 22px; /* تقليل حجم الخط */
+    }
+  
+    .card-2 img {
+      margin: 0 0 20px 0; /* تقليل المسافة بين الصورة والنص */
+      width: 100%;
+      max-width: 100%; /* الحفاظ على عرض الصورة */
+      height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    }
+  
+    .card-2 p {
+      max-width: 400px;
+    }
+  }
+  
+  @media (max-width: 420px) {
+    .card-2 img {
+      height: 50vw;
+      width: 50vw;
+      border-radius: 50%;
+      margin: -140px 0 30px 0;
+    }
+  }

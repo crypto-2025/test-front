@@ -1,0 +1,39 @@
+
+  .title{
+    font-size: 25px;
+    font-weight: bolder;
+    color: #f8edf6;
+   
+  }
+  .container {
+    display: flex; /* جعل الأزرار في صف */
+  }
+  .style-button {
+    
+    background-color: transparent; /* خلفية شفافة */
+    color: white; /* لون النص */
+    border: 2px solid transparent; /* حدود شفافة */
+    border-radius: 25px; /* زوايا مستديرة */
+    padding: 10px 20px; /* المسافة الداخلية */
+    margin: 0 5px; /* مسافة بين الأزرار */
+    cursor: pointer; /* تغيير المؤشر عند المرور */
+    transition: border 0.3s ease; /* تأثير الانتقال */
+  }
+  .style-button:hover {
+    border: 2px solid rgba(240, 238, 238, 0.5); /* حدود عند المرور */
+  }
+  
+  .style-button.active {
+    border: 2px solid #f5f1f5; /* لون الحدود عند تحديد الزر */
+  }
+  
+  .button {
+    width: 350px;
+    background-color: #640D5F; /* لون الخلفية للزر */
+    color: white; /* لون النص */
+    border: none; /* إزالة الحدود */
+    border-radius: 50px; /* زوايا مستديرة */
+    padding: 10px 20px; /* المسافة الداخلية */
+    cursor: pointer; 
+    font-size: 50px;/* تغيير المؤشر عند المرور */
+  }

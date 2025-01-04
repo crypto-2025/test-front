@@ -1,0 +1,154 @@
+.card-2 {
+  margin: 10px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 300px;
+  max-width: 450px;
+  height: 540px;
+  max-height: 600px;
+  padding: 10px;
+  background: linear-gradient(to top right, #640D5F, rgb(1, 15, 78));
+  border-radius: 24px;
+  background-color: rgba(85, 84, 84, 0.7);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* تأثير التحريك والتظليل */
+}
+
+.card-2:hover {
+  transform: scale(1.05); /* تكبير الكرت */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* تحسين الظل عند التحويم */
+}
+
+.card-2 img {
+  width: 280px;
+  max-width: 450px;
+  height: 370px;
+  max-height: 370px;
+  object-fit: cover;
+  border-radius: 24px;
+  margin: 0 auto 12px;
+  transition: transform 0.3s ease; /* تأثير التحريك للصورة */
+}
+
+.card-2:hover {
+  transform: scale(1.1); /* تكبير الصورة عند التحويم */
+}
+
+.card-2 h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #f1ebeb;
+  text-align: center;
+  margin: 8px 0;
+}
+
+.card-2 h3 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #f1ebeb;
+  text-align: center;
+  margin: 8px 0;
+  opacity: 0.8;
+}
+
+.card-2 p {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 16px;
+  opacity: 0.6;
+}
+
+.card-2 .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.card-2 button {
+  border: 1px solid #640D5F;
+  background: transparent;
+  font-weight: 500;
+  color: #f8f8f8;
+  width: 100px;
+  max-width: 150px;
+  text-align: center;
+  font-family: inherit;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 40px;
+  transition: background 0.3s, transform 0.3s ease; /* تأثير التحريك */
+}
+
+.card-2 button.primary {
+  background: linear-gradient(to top right, #640D5F, rgb(199, 113, 238));
+  color: #ffffff;
+}
+
+.card-2 button:hover {
+  transform: scale(1.1); /* تكبير الأزرار عند التحويم */
+  background: linear-gradient(to top right, rgb(199, 113, 238), #640D5F);
+}
+
+.ellipsis {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* استجابة الشاشات المتوسطة */
+@media (max-width: 768px) {
+  .card-2 {
+    width: 100%; /* اجعل العرض 100% ليتناسب مع العرض الكامل */
+    height: auto; /* اجعل الارتفاع تلقائي */
+    padding: 10px;
+    margin: 0; /* إزالة الهوامش لضمان أخذ الحجم الكامل */
+  }
+
+  .card-2 h2,
+  .card-2 h3 {
+    font-size: 18px; /* تقليل حجم الخط ليتناسب مع الشاشات الصغيرة */
+  }
+
+  .card-2 p {
+    font-size: 13px; /* تقليل حجم الخط للنصوص */
+  }
+
+  .card-2 img {
+    max-width: 100%; /* اجعل الصورة تأخذ العرض الكامل */
+    height: auto; /* اجعل الصورة مرنة في الارتفاع */
+    margin-top: 10px; /* تقليل المسافة بين الصورة والنصوص */
+  }
+
+  .card-2 button {
+    width: 100%; /* جعل الأزرار تأخذ العرض الكامل */
+  }
+}
+
+/* استجابة الشاشات الصغيرة */
+@media (max-width: 480px) {
+  .card-2 {
+    width: 100%; /* الكرت يأخذ عرض الشاشة بالكامل */
+    height: auto; /* الارتفاع يتكيف مع المحتوى */
+  }
+
+  .card-2 img {
+    width: 100%; /* جعل الصورة تأخذ العرض بالكامل */
+    height: auto; /* الارتفاع يتكيف مع الصورة */
+    margin-top: 16px; /* المسافة بين الصورة والنصوص */
+  }
+
+  .card-2 h2,
+  .card-2 h3 {
+    font-size: 16px; /* تقليل حجم الخط بشكل أكبر */
+  }
+
+  .card-2 button {
+    margin-left: 100px;
+    width: 100%; /* جعل الأزرار تأخذ عرض الشاشة */
+  }
+}
+
