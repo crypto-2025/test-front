@@ -1,13 +1,17 @@
 .header {
   display: flex;
-
-  
-  align-items: center; /* محاذاة العناصر في المنتصف */
-  padding: 10px 10px; /* تقليل الحواف */
+  align-items: center; 
+  padding: 10px 10px; 
   font-family: 'Calibri', sans-serif;
   color: rgb(255, 255, 255);
   background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* إضافة ظل */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.right{
+  display: flex;
+
 }
 .nav-links1{
   width: 90%;
@@ -71,9 +75,10 @@
 .search-container1 {
   display: flex;
   justify-content: center;
+  align-items: center;
   position: relative;
-  flex-grow: 1; /* جعل شريط البحث ينمو ليملأ المساحة المتاحة */
-  margin: 0; /* إزالة المسافة بين العناصر */
+  flex-grow: 1; 
+  margin: 0; 
  
 }
 .search-bar {
@@ -83,32 +88,34 @@
   color: #000;
   border: #640D5F 1px solid;
   background-color: rgb(202, 190, 250);
-  transition: all 0.4s ease; /* تأثير الانتقال */
-  flex-grow: 1; /* جعل حقل البحث ينمو ليملأ المساحة المتاحة */
-  margin: 10px; /* إضافة مسافة بين حقل البحث والأيقونة */
+  transition: all 0.4s ease; 
+  flex-grow: 1; 
+  margin: 10px; 
+  padding-left: 10px;
 }
 
 .search-icon {
-  font-size: 22px; /* حجم الأيقونة */
+  font-size: 22px; 
   color: rgb(80, 3, 95);
   cursor: pointer;
   margin-top: 22px;
-  /* تغيير المؤشر عند المرور فوق الأيقونة */
+  
 }
-/* زر Burger Icon */
+
 .burger-icon {
-  display: none; /* إخفاء الزر افتراضيًا */
+  display: none; 
   background: none;
   border: none;
   font-size: 25px;
   cursor: pointer;
+  margin-right: 10px;
   color: rgb(80, 3, 95);
-  text-align: end;
+  /* text-align: end; */
  
 
 }
 
-/* إعدادات القائمة */
+
 .nav-links1 {
   display: flex;
   gap: 25px;
@@ -116,9 +123,10 @@
 }
 
 .nav-links1.active {
-  display: block; /* عرض القائمة عندما تكون نشطة */
-  text-align: center;
-  justify-content: center;
+  display: block; 
+
+ 
+
 
 }
 .btn_group{
@@ -127,6 +135,16 @@
 }
 
 @media (max-width: 1250px) {
+  .header {
+    align-items: center;
+    padding: 20px;
+    height: auto;
+
+    justify-content: space-between;
+
+   
+  }
+  
   .burger-icon {
     display: block; /* إظهار الزر في الشاشات الصغيرة */
   }
@@ -134,33 +152,39 @@
   .nav-links1 {
     display: none; /* إخفاء الروابط في الوضع العادي */
     position: absolute;
-    top: 85px; /* تحت الشريط */
-    right: 0; /* إلى الجانب */
-    right: -300px;
+    top: 0px; 
+    right: 0; 
+   
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 100%;
+    width: 20%;
     flex-direction: column;
     padding: 10px;
     z-index: 1000;
-    border-bottom-right-radius: 10px;
+  
     border-bottom-left-radius: 10px;
-    justify-content: space-between;
+    justify-content:center;
     gap: 10px;
-    transition: right 0.5s ease; /* حركة انتقال سلسة عند التغيير */
+    transition: right 0.5s ease; 
+    height: 100vh;
+    padding-top: 9% !important;
   
   }
 
   .nav-links1.active {
-    display: flex; /* إظهار القائمة النشطة */
-    align-items: flex-start;
-    right: 0;
+   
+             display: flex ;
+            align-items: center;
+            right: 0;
+            justify-content: flex-end;
+            gap: 10px;
+            flex-direction: column-reverse
   }
 
   .nav-links1 ul {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 30px;
   }
 
   .nav-links1 li {
@@ -178,7 +202,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
   }
   .logo1_contanier{
     width: 30%;
@@ -192,37 +216,15 @@
 
 @media (max-width: 786px) {
   .header {
-    /* flex-direction: column; */
-    /* flex-wrap: wrap; */
     align-items: center;
     padding: 20px;
     height: auto;
+
     justify-content: space-between;
 
    
   }
-  .create-button,
-  .login-button,
-  .buy-button,
-  .connect-wallet {
-    padding: 8px 10px; /* تقليل الحواف */
-    font-size: 14px; /* تقليل حجم النص */
-    height: 100px;
-  }
-
-
-  .nav-links1 ul {
-    flex-direction: row; 
-    flex-wrap: wrap;
-    justify-content: center;/* ترتيب الروابط عموديًا */
-    gap: 15px;
-  }
-
-  .search-container {
-    width: 100%;
-    max-width: none;
-    margin: 10px 0;
-  }
+  
   .burger-icon {
     display: block; /* إظهار الزر في الشاشات الصغيرة */
   }
@@ -230,28 +232,39 @@
   .nav-links1 {
     display: none; /* إخفاء الروابط في الوضع العادي */
     position: absolute;
-    top: 70px; /* تحت الشريط */
-    right: 10px; /* إلى الجانب */
+    top: 0px; 
+    right: 0; 
+   
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 100%;
+    width: 30%;
     flex-direction: column;
     padding: 10px;
     z-index: 1000;
-    border-radius: 10px;
-    justify-content: space-between;
+  
+    border-bottom-left-radius: 10px;
+    justify-content:center;
     gap: 10px;
+    transition: right 0.5s ease; 
+    height: 100vh;
+    padding-top: 9% !important;
+  
   }
 
   .nav-links1.active {
-    display: flex; /* إظهار القائمة النشطة */
-    align-items: flex-start
+   
+             display: flex ;
+            align-items: center;
+            right: 0;
+            justify-content: flex-end;
+            gap: 10px;
+            flex-direction: column-reverse
   }
 
   .nav-links1 ul {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 30px;
   }
 
   .nav-links1 li {
@@ -259,61 +272,110 @@
   }
 
   .nav-links1 a, .nav-links1 button {
-
-    text-decoration: none;
     font-size: 16px;
-    padding: 10px 15px;
-   
     border: none;
-    border-radius: 10px;
     cursor: pointer;
     text-align: center;
- 
     transition: background-color 0.3s ease;
   }
+  .nav-links1 .primaryButton{
+    width: 140px;
+ 
+}
   .btn_group{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 30px;
+  }
+  .logo1_contanier{
+    width: 30%;
+  }
+  .burger-icon {
+    width: 30%;
   }
 }
 
 /* استجابة الشاشات الصغيرة */
 @media (max-width: 480px) {
   .header {
-    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: auto;
 
-    width: auto;
-    height: auto; /* محاذاة العناصر إلى اليسار */
- 
+    justify-content: space-between;
+
+   
+  }
   
-
+  .burger-icon {
+    display: block; 
   }
 
-  .logo1 {
-    height: 50px;
-    width: 50px;
-    margin-left: 0;
+  .nav-links1 {
+    display: none; /* إخفاء الروابط في الوضع العادي */
+    position: absolute;
+    top: 0px; 
+    right: 0; 
+   
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    flex-direction: column;
+    padding: 10px;
+    z-index: 1000;
+  
+    border-bottom-left-radius: 10px;
+    justify-content:center;
+    gap: 10px;
+    transition: right 0.5s ease; 
+    height: 100vh;
+    padding-top: 20% !important;
+  
+  }
+
+  .nav-links1.active {
+   
+             display: flex ;
+            align-items: center;
+            right: 0;
+            justify-content: flex-end;
+            gap: 10px;
+            flex-direction: column-reverse
   }
 
   .nav-links1 ul {
-    font-size: 16px; /* تقليل حجم النص */
-    gap: 10px;
-  }
-  .auth-buttons1{
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
   }
 
-  .create-button,
-  .login-button,
-  .buy-button,
-  .connect-wallet {
-    padding: 8px 10px; /* تقليل الحواف */
-    font-size: 5px; /* تقليل حجم النص */
+  .nav-links1 li {
+    list-style: none;
   }
 
-  .search-bar {
-    font-size: 14px; /* تقليل حجم النص */
+  .nav-links1 a, .nav-links1 button {
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  .nav-links1 .primaryButton{
+      width: 132px;
+   
+  }
+  .btn_group{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  }
+  .logo1_contanier{
+    width: 30%;
+  }
+  .burger-icon {
+    width: 30%;
   }
 }
 

@@ -3,14 +3,15 @@ import { CgFacebook } from "react-icons/cg";
 import { FaTelegram, FaTwitterSquare, FaYoutube } from "react-icons/fa";
 import { SiAppstore, SiGoogleplay } from "react-icons/si";
 import './footer.css';
+import Container from '@mui/material/Container'
 
 const Footer = () => {
   return (
     <footer
       style={{
         width: "100%",
-        // backgroundColor: "#640D5F",
-        backgroundColor: "rgb(145 0 137)",
+        backgroundColor: "#640D5F",
+       
 
         padding: "40px 20px",
         color: "white",
@@ -25,7 +26,9 @@ const Footer = () => {
           flexWrap: "wrap",
           justifyContent: "space-between",
           alignItems: "flex-start",
+
         }}
+        className="footer-content"
       >
         {/* Logo Section */}
         <div style={{ textAlign: "center", marginBottom: "20px" }}>
@@ -71,11 +74,11 @@ const Footer = () => {
         </div>
 
         {/* Community Section */}
-        <div>
+        <div >
           <h3 style={{ ...styles.sectionHeader, marginBottom: "20px" }}>Join The Community</h3>
-          <div style={styles.iconsContainer}>
+          <div style={styles.iconsContainer} className="iconContainer">
             {[CgFacebook, FaTelegram, FaTwitterSquare, FaYoutube, SiAppstore, SiGoogleplay].map((Icon, index) => (
-              <div key={index} style={styles.iconContainer}>
+              <div key={index} style={styles.iconContainer} >
                 <Icon style={styles.icon} />
               </div>
             ))}
@@ -128,7 +131,7 @@ const styles = {
     transition: "transform 0.3s ease-in-out",
   },
   iconContainer: {
-    background: "linear-gradient(to top right, #FF80FF,rgb(238, 21, 238))",
+    background: "linear-gradient(to top, #0c0131, rgba(156, 1, 156, 0.7))",
     borderRadius: "50%",
     padding: "15px",
     display: "flex",

@@ -112,6 +112,7 @@ const AppContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+ overflow: hidden;
  
 `;
 const Wrapper = styled.div`

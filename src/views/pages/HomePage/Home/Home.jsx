@@ -59,7 +59,9 @@ function HomePage() {
             title={'Alaa'}
             likesCount={'3.3'}
           subscrib={'2'}
-            major={'Front End'}/>
+            major={'Front End'}
+            Subscribe/>
+            
           <div style={{ display: "flex", justifyContent: "center", marginTop: "50px" }}>
           <Button withAnimation > Bundells</Button>
          
@@ -72,6 +74,8 @@ function HomePage() {
           likesCount={'3.3'}
           subscrib={'2'}
           major={'Front End'}
+          Subscribe
+          
 
 
           />
@@ -105,7 +109,7 @@ function HomePage() {
     </div>
          <div  className ='SectionWrapper'style={{ display: "flex",justifyContent: "center",  flexWrap: "wrap" }}>
         
-                    {Array.from({ length: 9 }).map((_, index) => (
+                    {Array.from({ length: 6 }).map((_, index) => (
     <ProfileCard
            titel="Georgia Ewing"
             text="@georgiaewing"

@@ -1,14 +1,14 @@
 import React from 'react';
 import './Solution.css'; 
 import { SectionWrapper } from "../../../../hoc";
+import Typography from '../../../../component/ui/typography/typography';
 
 const Solution = () => {
   return (
-    <div className="container1">
-      <div className="content1">
-        <h1 className="title1" style={{ 
-      
-         }}>Our Solutions</h1>
+    <div className="Solution_container">
+      <div className="text-content">
+        <Typography component='headTitle'>Our Solutions</Typography>
+     
         
           <p className="description1" style={{ 
 
@@ -18,8 +18,8 @@ const Solution = () => {
           </p>
        
       </div>
-      <div className="image-containerin1">
-        <img src="assets/Images/15.jpg" alt="MAS Platform" className="image" />
+      <div className="image-container">
+   
       </div>
     </div>
   );

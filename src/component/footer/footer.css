@@ -5,7 +5,8 @@
 @media (max-width: 768px) {
   footer div {
     flex-direction: column; /* جعل العناصر عمودية */
-    align-items: center;
+    align-items: center !important;
+    justify-content: center;
   }
 
   footer h3 {
@@ -14,6 +15,9 @@
 
   footer ul li h2 {
     font-size: 16px;
+  }
+  .iconContainer{
+    flex-direction: row !important;
   }
 }
 

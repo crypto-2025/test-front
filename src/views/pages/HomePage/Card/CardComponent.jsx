@@ -13,7 +13,8 @@ function Card3({
   likesCount,
   id,
   subscrib,
-  CardpersonalInfo
+  CardpersonalInfo,
+  Subscribe
 }) {
   const [isLiked, setIsLiked] = useState(false); 
   
@@ -70,14 +71,22 @@ function Card3({
         
           }}
         >
-          <button
+          {Subscribe ? (    <button
             onClick={onFollow}
             className="primary"
             style={{}}
           >
            Subscribe
            
-          </button>
+          </button>):  (    <button
+            onClick={onFollow}
+            className="primary"
+            style={{}}
+          >
+           Details
+           
+          </button>) }
+      
         
           <div
             style={{
@@ -94,6 +103,7 @@ function Card3({
               style={{
                 color: "white",
                 marginLeft: "7px",
+                margin : "7px",
               }}
             >
               {likesCount}
@@ -101,6 +111,7 @@ function Card3({
              <FaComment style={{ 
                           color:'white',
                           fontSize:'20px',
+                          margin : "7px",
                      
                          }}  />
             <span

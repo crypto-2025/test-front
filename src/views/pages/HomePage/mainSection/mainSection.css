@@ -8,6 +8,7 @@
     background: linear-gradient(to top, #0c0131, rgba(156, 1, 156, 0.7)); /* خلفية سوداء */
     color: white;
     font-family: "Arial", sans-serif;
+    width: 90%;
 }
 
 .image-container {

@@ -3,7 +3,7 @@ import './secandSection.css';
 
 const Card = ({ imgsrc1, imgsrc, titel, text }) => {
   return (
-    <div className="cardContainer">
+    <div className="ProfileCard">
       
       <div className="profile-picture">
         <img 

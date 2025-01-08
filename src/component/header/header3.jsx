@@ -5,7 +5,7 @@ import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
 import { Link, useNavigate } from 'react-router-dom';
 import Button from '../ui/Button/button';
 
-const Header = () => {
+const   Header = () => {
   const [isSearchVisible, setSearchVisible] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false); 
  
@@ -39,7 +39,8 @@ const Header = () => {
         <img className="logo1" src="assets/Images/logo.png" alt="Logo" />
       </div>
 
-      <div className="search-container1">
+    <div className='right'>
+    <div className="search-container1">
         {isSearchVisible && (
           <input
             type="text"
@@ -57,6 +58,7 @@ const Header = () => {
       <button className="burger-icon" onClick={toggleMenu}>
         {isMenuOpen ? <FaTimes /> : <FaBars />}
       </button>
+    </div>
 
 
 

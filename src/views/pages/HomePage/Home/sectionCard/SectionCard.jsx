@@ -8,7 +8,8 @@ const SectionCard = ({
     likesCount,
   subscrib,
     major,
-    CardpersonalInfo
+    CardpersonalInfo,
+    Subscribe
 }) => {
     const carouselRef = useRef(null);
     console.log(CardpersonalInfo)
@@ -62,6 +63,7 @@ const SectionCard = ({
           subscrib={subscrib}
             major={major}
             CardpersonalInfo={CardpersonalInfo}
+            Subscribe={Subscribe}
           />
                     </div>
                 ))}
